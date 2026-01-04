@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.mobile_booking_online_doctor"
-        minSdk = 21
+        minSdk = flutter.minSdkVersion
         targetSdk = 35 // Updated to match compileSdk
         versionCode = 1
         versionName = "1.0"
