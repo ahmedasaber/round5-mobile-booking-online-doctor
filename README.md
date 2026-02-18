@@ -6,6 +6,39 @@ A comprehensive Flutter mobile application for booking doctor appointments with 
 
 Mobile Booking Online Doctor is a full-featured healthcare application that allows users to search for doctors by specialty, book appointments, manage their profile, and access various healthcare services. The app provides a seamless experience for patients to connect with healthcare providers.
 
+## 📱 Screenshots
+
+<p align="center">
+  <img src="cure_app_screenshots/sphash.png" width="19%" />
+  <img src="cure_app_screenshots/onboarding1.png" width="19%" />
+  <img src="cure_app_screenshots/onboarding2.png" width="19%" />
+  <img src="cure_app_screenshots/login0.png" width="19%" />
+  <img src="cure_app_screenshots/login.png" width="19%" />
+</p>
+
+<p align="center">
+  <img src="cure_app_screenshots/home.png" width="19%" />
+  <img src="cure_app_screenshots/search.png" width="19%" />
+  <img src="cure_app_screenshots/search1.png" width="19%" />
+  <img src="cure_app_screenshots/search2.png" width="19%" />
+  <img src="cure_app_screenshots/search3.png" width="19%" />
+</p>
+
+<p align="center">
+  <img src="cure_app_screenshots/specialties.png" width="19%" />
+    <img src="cure_app_screenshots/doctors.png" width="19%" />
+    <img src="cure_app_screenshots/booking.png" width="19%" />
+    <img src="cure_app_screenshots/profile.png" width="19%" />
+</p>
+
+
+<p align="center">
+  <img src="cure_app_screenshots/favorites.png" width="19%" />
+  <img src="cure_app_screenshots/notifications.png" width="19%" />
+  <img src="cure_app_screenshots/language.png" width="19%" />
+  <img src="cure_app_screenshots/en_profile.png" width="19%" />
+</p>
+
 ## ✨ Key Features
 
 ### 🔐 Authentication & Onboarding
@@ -60,13 +93,6 @@ Mobile Booking Online Doctor is a full-featured healthcare application that allo
 - Separate lists for doctors and hospitals
 - Easy favorite management
 - Quick booking from favorites
-
-### 🔔 Notifications
-- Real-time push notifications
-- Appointment reminders
-- Status update notifications
-- In-app notification center
-- Notification preferences
 
 ### 👤 Profile Management
 - Complete profile editing
