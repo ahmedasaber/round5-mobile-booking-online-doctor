@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import '../../../../core/theming/styles.dart';
 
 class PriceSection extends StatelessWidget {
+  final String price;
+  const PriceSection({super.key, required this.price});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,7 +14,7 @@ class PriceSection extends StatelessWidget {
           Text("Price", style: TextStyles.black23w700),
           Text("\\hours", style: TextStyles.grey15w400),
           const Spacer(),
-          Text("350\$", style: TextStyles.red15w400),
+          Text(price, style: TextStyles.red15w400),
         ],
       ),
     );

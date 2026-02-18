@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:mobile_booking_online_doctor/core/constant/constant.dart';
+import 'package:mobile_booking_online_doctor/core/constant/dummy_data.dart';
 import 'package:mobile_booking_online_doctor/features/home/data/models/doctor_model.dart';
 import 'package:mobile_booking_online_doctor/features/search/data/datasource/search_remote_data_source.dart';
 
@@ -7,6 +8,10 @@ class SearchRemoteDataSourceImpl extends SearchRemoteDataSource{
   Dio dio = Dio();
   @override
   Future<List<DoctorModel>> fetchSearchResult({required String query}) async{
+    return doctorsDummyData.where((e) =>
+      e.specialtyNameEn.toLowerCase().contains(query.toLowerCase()) ||
+      e.name.toLowerCase().contains(query.toLowerCase()) ||
+      e.location.toLowerCase().contains(query.toLowerCase())).toList();
     try {
       Response response = await dio.get(
         'https://round5-online-booking-with-doctor-api.huma-volve.com/api/doctors/search?query=$query',

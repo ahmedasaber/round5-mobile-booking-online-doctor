@@ -16,21 +16,12 @@ class MainAuthScreen extends StatelessWidget {
     final dark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       backgroundColor: ColorsManger.light,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            // Handle back button press
-          },
-        ),
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TextStyles.defaultSpace),
           child: Column(
             children: [
+              const SizedBox(height: kToolbarHeight + 20),
               // heading image
               Image(height: 150, image: AssetImage(Assets.mainAuthImage)),
 

@@ -1,3 +1,5 @@
+import 'package:mobile_booking_online_doctor/features/home/domain/entities/doctor_entity.dart';
+
 import '../../../../core/theming/styles.dart';
 import '../../../confirm_appointment/UI/confirm_appointment_view.dart';
 import '../widgets/review_card.dart';
@@ -9,8 +11,9 @@ import '../widgets/review_header.dart';
 import '../widgets/review_summry.dart';
 
 class DoctorDetailsPage extends StatelessWidget {
-  const DoctorDetailsPage({super.key});
+  const DoctorDetailsPage({super.key, required this.doctorEntity});
   static const String routeName = '/doctorDetails';
+  final DoctorEntity doctorEntity;
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -38,23 +41,23 @@ class DoctorDetailsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            DoctorHeader(),
+            DoctorHeader(doctorEntity: doctorEntity,),
             const SizedBox(height: 24),
-            DoctorStatsRow(),
+            DoctorStatsRow(experienceYears: doctorEntity.experienceYears, rate: doctorEntity.rating,),
             const SizedBox(height: 24),
             Text("About Doctor", style: TextStyles.black23w700),
             const SizedBox(height: 8),
             Text(
-              "Dr. Jessica is an experienced pulmonologist with over 10 years in helping patients...",
+              doctorEntity.about,
               style: TextStyles.grey19w400,
             ),
             const SizedBox(height: 24),
             ReviewHeader(),
             const SizedBox(height: 15),
-            ReviewSummary(),
+            ReviewSummary(rate: doctorEntity.rating,),
             const SizedBox(height: 8),
             ReviewCard(),
-            PriceSection(),
+            PriceSection(price: doctorEntity.pricePerHour,),
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {

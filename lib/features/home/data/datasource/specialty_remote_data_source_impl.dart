@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:mobile_booking_online_doctor/core/constant/constant.dart';
+import 'package:mobile_booking_online_doctor/core/constant/dummy_data.dart';
 import 'package:mobile_booking_online_doctor/features/home/data/datasource/specialty_remote_data_source.dart';
 import 'package:mobile_booking_online_doctor/features/home/data/models/specialty_model.dart';
 
@@ -7,6 +8,7 @@ class SpecialtyRemoteDataSourceImpl implements SpecialtyRemoteDataSource{
   Dio dio = Dio();
   @override
   Future<List<SpecialtyModel>> fetchSpecialties() async{
+    return dummySpecialties;
     try {
       Response response = await dio.get(
           'https://round5-online-booking-with-doctor-api.huma-volve.com/api/specialities',

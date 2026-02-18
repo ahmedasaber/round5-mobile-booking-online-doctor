@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:mobile_booking_online_doctor/core/constant/constant.dart';
 import 'package:mobile_booking_online_doctor/core/di/dependency_injection.dart';
 import 'package:mobile_booking_online_doctor/features/favorite/data/data%20source/favorite_remote_data_source.dart';
+import '../../../../core/constant/dummy_data.dart';
 import '../models/doctor_model.dart';
 import 'doctor_remote_data_source.dart';
 
@@ -12,6 +13,7 @@ class DoctorsRemoteDataSourceImpl implements DoctorRemoteDataSource{
 
   @override
   Future<List<DoctorModel>> fetchDoctors() async{
+    return doctorsDummyData;
     try {
       Response response = await dio.get(
           'https://round5-online-booking-with-doctor-api.huma-volve.com/api/doctors',

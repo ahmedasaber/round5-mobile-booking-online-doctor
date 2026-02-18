@@ -43,6 +43,14 @@ class _DoctorCardItemState extends State<DoctorCardItem> {
                 width: 80,
                 height: 80,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Image.asset(
+                    'assets/images/doctor-image1.png',
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  );
+                },
               ),
             ),
             const SizedBox(width: 8.0),

@@ -23,6 +23,8 @@ class BookScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('My Booking', style: TextStyles.black16w700),
         backgroundColor: Colors.white,
+        leading: SizedBox(),
+        leadingWidth: 0,
       ),
       body: Column(
         children: [

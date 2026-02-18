@@ -66,7 +66,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                              mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text('Search by your location ', style: TextStyles.regular13,),
-                              Text('129,El-Nasr Street, Cairo', style: TextStyles.regular11.copyWith(color: ColorsManger.lightPrimaryColor),),
+                              Expanded(child: Text('129,El-Nasr Street, Cairo', overflow:TextOverflow.ellipsis, maxLines:1,style: TextStyles.regular11.copyWith(color: ColorsManger.lightPrimaryColor),)),
                             ],
                           ),
                           const SizedBox(height: 16,),
@@ -114,6 +114,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                                 );
                               }
                             ),
+                          SizedBox(height: 80,)
                         ],
                       ),
                     );

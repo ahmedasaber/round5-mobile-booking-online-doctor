@@ -4,12 +4,14 @@ import '../../../../core/helpers/assets.dart';
 import '../../../../core/theming/styles.dart';
 
 class ReviewSummary extends StatelessWidget {
+  const ReviewSummary({super.key, required this.rate});
+  final String rate;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         const SizedBox(width: 20),
-        Text("4.5/5", style: TextStyles.black23w700),
+        Text("$rate/5", style: TextStyles.black23w700),
         const Spacer(),
         Column(
           children: [

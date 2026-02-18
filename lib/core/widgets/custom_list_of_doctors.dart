@@ -24,7 +24,7 @@ class ListOfDoctors extends StatelessWidget {
       itemBuilder: (context, i){
         return GestureDetector(
           onTap: (){
-            Navigator.pushNamed(context, DoctorDetailsPage.routeName, arguments: i);
+            Navigator.pushNamed(context, DoctorDetailsPage.routeName, arguments: doctors[i]);
           },
           child: DoctorCardItem(doctorEntity: doctors[i],),
         );

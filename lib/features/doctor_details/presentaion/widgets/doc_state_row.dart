@@ -4,27 +4,30 @@ import '../../../../core/helpers/assets.dart';
 import 'doctor_state.dart';
 
 class DoctorStatsRow extends StatelessWidget {
+  const DoctorStatsRow({super.key, required this.experienceYears, required this.rate});
+  final num experienceYears;
+  final String rate;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
-        DoctorStat(
+      children: [
+        const DoctorStat(
           title: "Patients",
           value: "500+",
           icon: Assets.assetsIconsProfile2user,
         ),
         DoctorStat(
           title: "Experience",
-          value: "10 yrs",
+          value: "$experienceYears yrs",
           icon: Assets.assetsIconsMedal,
         ),
         DoctorStat(
           title: "Rating",
-          value: "4.9",
+          value: "$rate",
           icon: Assets.assetsIconsStarDark,
         ),
-        DoctorStat(
+        const DoctorStat(
           title: "Reviews",
           value: "1870",
           icon: Assets.assetsIconsMessages,

@@ -22,7 +22,6 @@ class _ProfileContainerState extends State<ProfileContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.h,
       width: double.infinity,
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
@@ -62,9 +61,13 @@ class _ProfileContainerState extends State<ProfileContainer> {
                       height: 16,
                     ),
                     horizontalSpace(4),
-                    Text(
-                      '129 El-Nasr Street, Cairo',
-                      style: TextStyles.font12lightGrayNormal,
+                    Expanded(
+                      child: Text(
+                        '129 El-Nasr Street, Cairo',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: TextStyles.font12lightGrayNormal,
+                      ),
                     ),
                   ],
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_booking_online_doctor/core/routes/routes.dart';
+import 'package:mobile_booking_online_doctor/features/home/domain/entities/doctor_entity.dart';
 import 'package:mobile_booking_online_doctor/features/home/domain/entities/specialty_entity.dart';
 import '../../features/auth/forget_password/view/forget_password_screen.dart';
 import '../../features/auth/login/view/login.dart';
@@ -58,7 +59,7 @@ class AppRouter {
           ),
         );
       case DoctorDetailsPage.routeName:
-        return MaterialPageRoute(builder: (_) => const DoctorDetailsPage());
+        return MaterialPageRoute(builder: (_) => DoctorDetailsPage(doctorEntity: arguments as DoctorEntity,));
 
       case BookScreen.routeName:
         return MaterialPageRoute(builder: (_) => const BookScreen());
