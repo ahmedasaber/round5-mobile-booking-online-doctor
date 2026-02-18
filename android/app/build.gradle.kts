@@ -1,13 +1,13 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
+    id("org.jetbrains.kotlin.android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
     namespace = "com.example.mobile_booking_online_doctor"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId = "com.example.mobile_booking_online_doctor"
         minSdk = flutter.minSdkVersion
-        targetSdk = 35 // Updated to match compileSdk
+        targetSdk = 36 // Updated to match compileSdk
         versionCode = 1
         versionName = "1.0"
 
